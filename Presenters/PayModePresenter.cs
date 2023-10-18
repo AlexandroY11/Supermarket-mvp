@@ -67,11 +67,14 @@ namespace Supermarket_mvp.Presenters
                     repository.Add(payMode);
                     view.Message = "PayMode added successfully";
                 }
+                view.IsSuccessful = true;
+                loadAllPayModeList();
+                CleanViewFields();
             } catch ( Exception ex)
             {
                 view.IsSuccessful = false;
                 view.Message = ex.Message;
-                CleanViewFields();
+                
             }
         }
 
@@ -113,6 +116,8 @@ namespace Supermarket_mvp.Presenters
         private void AddNewPayMode(object? sender, EventArgs e)
         {
             view.IsEdit = false;
+            CleanViewFields();
+
         }
 
         private void SearchPayMode(object? sender, EventArgs e)
