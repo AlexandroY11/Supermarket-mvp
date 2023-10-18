@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Supermarket_mvp._Repositories;
+using Supermarket_mvp.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,29 +44,35 @@ namespace Supermarket_mvp.Views
             get { return TxtPayModeId.Text; }
             set { TxtPayModeId.Text = value; }
         }
-        public string PayModeName {
+        public string PayModeName
+        {
             get { return TxtPayModeName.Text; }
             set { TxtPayModeName.Text = value; }
         }
-        public string PayModeObservation {
+        public string PayModeObservation
+        {
             get { return TxtPayModeObservation.Text; }
             set { TxtPayModeObservation.Text = value; }
         }
-        public string SearchValue {
+        public string SearchValue
+        {
             get { return TxtSearch.Text; }
             set { TxtSearch.Text = value; }
         }
-        public bool IsEdit {
+        public bool IsEdit
+        {
             get { return isEdit; }
             set { isEdit = value; }
         }
 
-        public string Message {
+        public string Message
+        {
             get { return message; }
             set { message = value; }
         }
 
-        bool IPayModeView.IsSuccessful {
+        bool IPayModeView.IsSuccessful
+        {
             get { return isSuccessful; }
             set { isSuccessful = value; }
         }
@@ -81,5 +89,26 @@ namespace Supermarket_mvp.Views
             //throw new NotImplementedException();
             DgPayMode.DataSource = payModeList;
         }
+
+        private static PayModeView instance;
+
+        public static PayModeView GetInstance()
+        {
+            if(instance == null || instance.IsDisposed)
+            {
+                instance = new PayModeView();
+            }
+            else
+            {
+                if(instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+            return instance;
+        }
+
+        
     }
 }
