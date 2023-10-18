@@ -13,6 +13,7 @@ namespace Supermarket_mvp.Views
         String PayModeObservation { get; set; }
         String SearchValue { get; set; }
         bool IsEdit { get; set; }
+        bool IsSuccessful { get; set; }
         String Message{ get; set; }
 
         event EventHandler SearchEvent;
