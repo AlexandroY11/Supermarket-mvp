@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\OneDrive - Fundación CECEP\\Documentos 1\\Proyectos CS\\Supermarket-mvp\\Supermarket-mvp.csproj": {}
+    "F:\\OneDrive - Fundación CECEP\\Documentos 1\\Proyectos CS\\Supermarket_mvp\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj": {}
   },
   "projects": {
-    "F:\\OneDrive - Fundación CECEP\\Documentos 1\\Proyectos CS\\Supermarket-mvp\\Supermarket-mvp.csproj": {
+    "F:\\OneDrive - Fundación CECEP\\Documentos 1\\Proyectos CS\\Supermarket_mvp\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\OneDrive - Fundación CECEP\\Documentos 1\\Proyectos CS\\Supermarket-mvp\\Supermarket-mvp.csproj",
+        "projectUniqueName": "F:\\OneDrive - Fundación CECEP\\Documentos 1\\Proyectos CS\\Supermarket_mvp\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj",
         "projectName": "Supermarket-mvp",
-        "projectPath": "F:\\OneDrive - Fundación CECEP\\Documentos 1\\Proyectos CS\\Supermarket-mvp\\Supermarket-mvp.csproj",
+        "projectPath": "F:\\OneDrive - Fundación CECEP\\Documentos 1\\Proyectos CS\\Supermarket_mvp\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj",
         "packagesPath": "C:\\Users\\auxsistemas2\\.nuget\\packages\\",
-        "outputPath": "F:\\OneDrive - Fundación CECEP\\Documentos 1\\Proyectos CS\\Supermarket-mvp\\obj\\",
+        "outputPath": "F:\\OneDrive - Fundación CECEP\\Documentos 1\\Proyectos CS\\Supermarket_mvp\\Supermarket-mvp\\Supermarket-mvp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\auxsistemas2\\AppData\\Roaming\\NuGet\\NuGet.Config",
