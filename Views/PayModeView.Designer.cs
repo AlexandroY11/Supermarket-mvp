@@ -33,10 +33,10 @@
             LblPayMode = new Label();
             tabControl1 = new TabControl();
             tabPagePayModeList = new TabPage();
-            BtnClosePayMode = new Button();
-            BtnDeletePayMode = new Button();
-            BtnEditPayMode = new Button();
-            BtnNewPayMode = new Button();
+            BtnClose = new Button();
+            BtnDelete = new Button();
+            BtnEdit = new Button();
+            BtnNew = new Button();
             DgPayMode = new DataGridView();
             BtnSearch = new Button();
             TxtSearch = new TextBox();
@@ -101,10 +101,10 @@
             // 
             // tabPagePayModeList
             // 
-            tabPagePayModeList.Controls.Add(BtnClosePayMode);
-            tabPagePayModeList.Controls.Add(BtnDeletePayMode);
-            tabPagePayModeList.Controls.Add(BtnEditPayMode);
-            tabPagePayModeList.Controls.Add(BtnNewPayMode);
+            tabPagePayModeList.Controls.Add(BtnClose);
+            tabPagePayModeList.Controls.Add(BtnDelete);
+            tabPagePayModeList.Controls.Add(BtnEdit);
+            tabPagePayModeList.Controls.Add(BtnNew);
             tabPagePayModeList.Controls.Add(DgPayMode);
             tabPagePayModeList.Controls.Add(BtnSearch);
             tabPagePayModeList.Controls.Add(TxtSearch);
@@ -117,45 +117,45 @@
             tabPagePayModeList.Text = "Pay Mode List";
             tabPagePayModeList.UseVisualStyleBackColor = true;
             // 
-            // BtnClosePayMode
+            // BtnClose
             // 
-            BtnClosePayMode.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnClosePayMode.Image = Properties.Resources.cerrar;
-            BtnClosePayMode.Location = new Point(587, 252);
-            BtnClosePayMode.Name = "BtnClosePayMode";
-            BtnClosePayMode.Size = new Size(199, 62);
-            BtnClosePayMode.TabIndex = 7;
-            BtnClosePayMode.UseVisualStyleBackColor = true;
+            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnClose.Image = Properties.Resources.cerrar;
+            BtnClose.Location = new Point(587, 252);
+            BtnClose.Name = "BtnClose";
+            BtnClose.Size = new Size(199, 62);
+            BtnClose.TabIndex = 7;
+            BtnClose.UseVisualStyleBackColor = true;
             // 
-            // BtnDeletePayMode
+            // BtnDelete
             // 
-            BtnDeletePayMode.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDeletePayMode.Image = Properties.Resources.delete;
-            BtnDeletePayMode.Location = new Point(587, 184);
-            BtnDeletePayMode.Name = "BtnDeletePayMode";
-            BtnDeletePayMode.Size = new Size(199, 62);
-            BtnDeletePayMode.TabIndex = 6;
-            BtnDeletePayMode.UseVisualStyleBackColor = true;
+            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnDelete.Image = Properties.Resources.delete;
+            BtnDelete.Location = new Point(587, 184);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(199, 62);
+            BtnDelete.TabIndex = 6;
+            BtnDelete.UseVisualStyleBackColor = true;
             // 
-            // BtnEditPayMode
+            // BtnEdit
             // 
-            BtnEditPayMode.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEditPayMode.Image = Properties.Resources.edit;
-            BtnEditPayMode.Location = new Point(587, 116);
-            BtnEditPayMode.Name = "BtnEditPayMode";
-            BtnEditPayMode.Size = new Size(199, 62);
-            BtnEditPayMode.TabIndex = 5;
-            BtnEditPayMode.UseVisualStyleBackColor = true;
+            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnEdit.Image = Properties.Resources.edit;
+            BtnEdit.Location = new Point(587, 116);
+            BtnEdit.Name = "BtnEdit";
+            BtnEdit.Size = new Size(199, 62);
+            BtnEdit.TabIndex = 5;
+            BtnEdit.UseVisualStyleBackColor = true;
             // 
-            // BtnNewPayMode
+            // BtnNew
             // 
-            BtnNewPayMode.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNewPayMode.Image = Properties.Resources._new;
-            BtnNewPayMode.Location = new Point(587, 48);
-            BtnNewPayMode.Name = "BtnNewPayMode";
-            BtnNewPayMode.Size = new Size(199, 62);
-            BtnNewPayMode.TabIndex = 4;
-            BtnNewPayMode.UseVisualStyleBackColor = true;
+            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnNew.Image = Properties.Resources._new;
+            BtnNew.Location = new Point(587, 48);
+            BtnNew.Name = "BtnNew";
+            BtnNew.Size = new Size(199, 62);
+            BtnNew.TabIndex = 4;
+            BtnNew.UseVisualStyleBackColor = true;
             // 
             // DgPayMode
             // 
@@ -277,8 +277,11 @@
             // 
             TxtPayModeId.Location = new Point(20, 34);
             TxtPayModeId.Name = "TxtPayModeId";
+            TxtPayModeId.ReadOnly = true;
             TxtPayModeId.Size = new Size(183, 23);
             TxtPayModeId.TabIndex = 1;
+            TxtPayModeId.Text = "0";
+            TxtPayModeId.TextAlign = HorizontalAlignment.Right;
             // 
             // LblPayModeId
             // 
@@ -323,10 +326,10 @@
         private Label LblSearch;
         private Button BtnSearch;
         private DataGridView DgPayMode;
-        private Button BtnClosePayMode;
-        private Button BtnDeletePayMode;
-        private Button BtnEditPayMode;
-        private Button BtnNewPayMode;
+        private Button BtnClose;
+        private Button BtnDelete;
+        private Button BtnEdit;
+        private Button BtnNew;
         private Button BtnSave;
         private TextBox TxtPayModeObservation;
         private Label label1;
