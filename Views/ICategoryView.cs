@@ -10,7 +10,7 @@ namespace Supermarket_mvp.Views
     {
         String CategoryId { get; set; }
         String CategoryName { get; set; }
-        String CategoryObservation { get; set; }
+        String CategoryDescription { get; set; }
         String SearchValue { get; set; }
         bool IsEdit { get; set; }
         bool IsSuccessful { get; set; }

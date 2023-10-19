@@ -302,6 +302,7 @@
             Controls.Add(PanelPayMode);
             Name = "PayModeView";
             Text = "Pay Mode Management";
+            Load += PayModeView_Load;
             PanelPayMode.ResumeLayout(false);
             PanelPayMode.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
