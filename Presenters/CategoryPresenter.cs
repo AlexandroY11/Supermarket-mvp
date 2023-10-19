@@ -128,6 +128,9 @@ namespace Supermarket_mvp.Presenters
             bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
             if (emptyValue == false)
             {
+                categoryList = repository.GetByValue(this.view.SearchValue);
+            } else
+            {
                 categoryList = repository.GetAll();
             }
             categoryBindingSource.DataSource = categoryList;

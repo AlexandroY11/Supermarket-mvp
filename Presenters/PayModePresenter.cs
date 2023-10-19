@@ -125,6 +125,9 @@ namespace Supermarket_mvp.Presenters
             bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
             if (emptyValue==false) 
             {
+                payModeList = repository.GetByValue(this.view.SearchValue);
+            } else
+            {
                 payModeList = repository.GetAll();
             }
             payModeBindingSource.DataSource = payModeList;
