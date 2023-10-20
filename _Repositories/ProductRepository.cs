@@ -11,7 +11,8 @@ namespace Supermarket_mvp._Repositories
 {
     internal class ProductRepository : BaseRepository, IProductRepository
     {
-        public ProductRepository(string connectionString) {
+        public ProductRepository(string connectionString)
+        {
             this.connectionString = connectionString;
         }
 
@@ -54,7 +55,7 @@ namespace Supermarket_mvp._Repositories
                 command.CommandText = @"UPDATE Products
                                         SET Product_Name =@name,
                                         Product_Price= @price,
-                                        Product_Stock = @stock
+                                        Product_Stock = @stock,
                                         Category_Id = @category_id
                                         WHERE Product_Id = @id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = productModel.Name;
@@ -82,7 +83,7 @@ namespace Supermarket_mvp._Repositories
                         var productModel = new ProductModel();
                         productModel.Id = (int)reader["Product_Id"];
                         productModel.Name = reader["Product_Name"].ToString();
-                        productModel.Price = (int)reader["Product_Price"];
+                        productModel.Price = (int)(decimal)reader["Product_Price"];
                         productModel.Stock = (int)reader["Product_Stock"];
                         productModel.CategoryId = (int)reader["Category_Id"];
                         ProductList.Add(productModel);
@@ -116,7 +117,7 @@ namespace Supermarket_mvp._Repositories
                         var productModel = new ProductModel();
                         productModel.Id = (int)reader["Product_Id"];
                         productModel.Name = reader["Product_Name"].ToString();
-                        productModel.Price = (int)reader["Product_Price"];
+                        productModel.Price = (int)(decimal)reader["Product_Price"];
                         productModel.Stock = (int)reader["Product_Stock"];
                         productModel.CategoryId = (int)reader["Category_Id"];
                         productList.Add(productModel);

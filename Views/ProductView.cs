@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Supermarket_mvp.Models;
 
 namespace Supermarket_mvp.Views
 {
@@ -91,16 +92,18 @@ namespace Supermarket_mvp.Views
             };
         }
 
-        public string ProductId {
+        public string ProductId
+        {
             get { return TxtProductId.Text; }
             set { TxtProductId.Text = value; }
         }
 
-        public string ProductName {
+        public string ProductName
+        {
             get { return TxtProductName.Text; }
             set { TxtProductName.Text = value; }
         }
-        
+
         public string ProductPrice
         {
             get { return TxtProductPrice.Text; }
@@ -113,8 +116,12 @@ namespace Supermarket_mvp.Views
             set { TxtProductStock.Text = value; }
         }
 
-        public string CategoryId { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        
+        public string CategoryId
+        {
+            get { return TxtCategoryId.Text; }
+            set { TxtCategoryId.Text = value; }
+        }
+
         public string SearchValue
         {
             get { return TxtSearch.Text; }

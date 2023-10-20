@@ -29,6 +29,9 @@ namespace Supermarket_mvp.Models
         [RegularExpression(@"^\d+$", ErrorMessage = "Product Stock must be a number")]
         public int Stock { get; set; }
 
+        [DisplayName("Category Id")]
+        [Required(ErrorMessage = "Category Id is required")]
+        [RegularExpression(@"^\d+$", ErrorMessage = "Category Id must be a number")]
         public int CategoryId { get; set; }
     }
 }

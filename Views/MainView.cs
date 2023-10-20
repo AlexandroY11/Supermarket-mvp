@@ -18,6 +18,7 @@ namespace Supermarket_mvp.Views
             BtnPayMode.Click += delegate { ShowPayModeView?.Invoke(this, EventArgs.Empty); };
             BtnCategories.Click += delegate { ShowCategoryView?.Invoke(this, EventArgs.Empty); };
             BtnProviders.Click += delegate { ShowProviderView?.Invoke(this, EventArgs.Empty); };
+            BtnProducts.Click += delegate { ShowProductView?.Invoke(this, EventArgs.Empty); };
             BtnExit.Click += delegate { this.Close(); };
         }
 

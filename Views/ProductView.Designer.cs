@@ -33,7 +33,6 @@
             LblProduct = new Label();
             tabControl1 = new TabControl();
             tabPageProductList = new TabPage();
-            tabPageProductDetail = new TabPage();
             BtnClose = new Button();
             BtnDelete = new Button();
             BtnEdit = new Button();
@@ -42,6 +41,11 @@
             BtnSearch = new Button();
             TxtSearch = new TextBox();
             LblSearch = new Label();
+            tabPageProductDetail = new TabPage();
+            LblCategoryId = new Label();
+            TxtProductStock = new TextBox();
+            TxtProductPrice = new TextBox();
+            LblProductPrice = new Label();
             BtnCancel = new Button();
             BtnSave = new Button();
             LblProductStock = new Label();
@@ -49,17 +53,13 @@
             LblProductName = new Label();
             TxtProductId = new TextBox();
             LblProductId = new Label();
-            TxtProductPrice = new TextBox();
-            LblProductPrice = new Label();
-            TxtProductStock = new TextBox();
-            LblCategoryId = new Label();
-            CbCategoryid = new ComboBox();
+            TxtCategoryId = new TextBox();
             PanelProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPageProductList.SuspendLayout();
-            tabPageProductDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgProduct).BeginInit();
+            tabPageProductDetail.SuspendLayout();
             SuspendLayout();
             // 
             // PanelProduct
@@ -120,28 +120,6 @@
             tabPageProductList.TabIndex = 0;
             tabPageProductList.Text = "Product List";
             tabPageProductList.UseVisualStyleBackColor = true;
-            // 
-            // tabPageProductDetail
-            // 
-            tabPageProductDetail.Controls.Add(CbCategoryid);
-            tabPageProductDetail.Controls.Add(LblCategoryId);
-            tabPageProductDetail.Controls.Add(TxtProductStock);
-            tabPageProductDetail.Controls.Add(TxtProductPrice);
-            tabPageProductDetail.Controls.Add(LblProductPrice);
-            tabPageProductDetail.Controls.Add(BtnCancel);
-            tabPageProductDetail.Controls.Add(BtnSave);
-            tabPageProductDetail.Controls.Add(LblProductStock);
-            tabPageProductDetail.Controls.Add(TxtProductName);
-            tabPageProductDetail.Controls.Add(LblProductName);
-            tabPageProductDetail.Controls.Add(TxtProductId);
-            tabPageProductDetail.Controls.Add(LblProductId);
-            tabPageProductDetail.Location = new Point(4, 24);
-            tabPageProductDetail.Name = "tabPageProductDetail";
-            tabPageProductDetail.Padding = new Padding(3);
-            tabPageProductDetail.Size = new Size(792, 322);
-            tabPageProductDetail.TabIndex = 1;
-            tabPageProductDetail.Text = "Product Detail";
-            tabPageProductDetail.UseVisualStyleBackColor = true;
             // 
             // BtnClose
             // 
@@ -226,6 +204,64 @@
             LblSearch.TabIndex = 8;
             LblSearch.Text = "Search Product";
             // 
+            // tabPageProductDetail
+            // 
+            tabPageProductDetail.Controls.Add(TxtCategoryId);
+            tabPageProductDetail.Controls.Add(LblCategoryId);
+            tabPageProductDetail.Controls.Add(TxtProductStock);
+            tabPageProductDetail.Controls.Add(TxtProductPrice);
+            tabPageProductDetail.Controls.Add(LblProductPrice);
+            tabPageProductDetail.Controls.Add(BtnCancel);
+            tabPageProductDetail.Controls.Add(BtnSave);
+            tabPageProductDetail.Controls.Add(LblProductStock);
+            tabPageProductDetail.Controls.Add(TxtProductName);
+            tabPageProductDetail.Controls.Add(LblProductName);
+            tabPageProductDetail.Controls.Add(TxtProductId);
+            tabPageProductDetail.Controls.Add(LblProductId);
+            tabPageProductDetail.Location = new Point(4, 24);
+            tabPageProductDetail.Name = "tabPageProductDetail";
+            tabPageProductDetail.Padding = new Padding(3);
+            tabPageProductDetail.Size = new Size(792, 322);
+            tabPageProductDetail.TabIndex = 1;
+            tabPageProductDetail.Text = "Product Detail";
+            tabPageProductDetail.UseVisualStyleBackColor = true;
+            // 
+            // LblCategoryId
+            // 
+            LblCategoryId.AutoSize = true;
+            LblCategoryId.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            LblCategoryId.Location = new Point(380, 128);
+            LblCategoryId.Name = "LblCategoryId";
+            LblCategoryId.Size = new Size(71, 15);
+            LblCategoryId.TabIndex = 19;
+            LblCategoryId.Text = "Category Id";
+            // 
+            // TxtProductStock
+            // 
+            TxtProductStock.Location = new Point(6, 146);
+            TxtProductStock.Name = "TxtProductStock";
+            TxtProductStock.PlaceholderText = "Product Stock";
+            TxtProductStock.Size = new Size(354, 23);
+            TxtProductStock.TabIndex = 18;
+            // 
+            // TxtProductPrice
+            // 
+            TxtProductPrice.Location = new Point(380, 86);
+            TxtProductPrice.Name = "TxtProductPrice";
+            TxtProductPrice.PlaceholderText = "Product Price";
+            TxtProductPrice.Size = new Size(354, 23);
+            TxtProductPrice.TabIndex = 17;
+            // 
+            // LblProductPrice
+            // 
+            LblProductPrice.AutoSize = true;
+            LblProductPrice.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            LblProductPrice.Location = new Point(380, 68);
+            LblProductPrice.Name = "LblProductPrice";
+            LblProductPrice.Size = new Size(82, 15);
+            LblProductPrice.TabIndex = 16;
+            LblProductPrice.Text = "Product Price";
+            // 
             // BtnCancel
             // 
             BtnCancel.Image = Properties.Resources.cancel;
@@ -292,49 +328,13 @@
             LblProductId.TabIndex = 8;
             LblProductId.Text = "Product Id";
             // 
-            // TxtProductPrice
+            // TxtCategoryId
             // 
-            TxtProductPrice.Location = new Point(380, 86);
-            TxtProductPrice.Name = "TxtProductPrice";
-            TxtProductPrice.PlaceholderText = "Product Price";
-            TxtProductPrice.Size = new Size(354, 23);
-            TxtProductPrice.TabIndex = 17;
-            // 
-            // LblProductPrice
-            // 
-            LblProductPrice.AutoSize = true;
-            LblProductPrice.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            LblProductPrice.Location = new Point(380, 68);
-            LblProductPrice.Name = "LblProductPrice";
-            LblProductPrice.Size = new Size(82, 15);
-            LblProductPrice.TabIndex = 16;
-            LblProductPrice.Text = "Product Price";
-            // 
-            // TxtProductStock
-            // 
-            TxtProductStock.Location = new Point(6, 146);
-            TxtProductStock.Name = "TxtProductStock";
-            TxtProductStock.PlaceholderText = "Product Stock";
-            TxtProductStock.Size = new Size(354, 23);
-            TxtProductStock.TabIndex = 18;
-            // 
-            // LblCategoryId
-            // 
-            LblCategoryId.AutoSize = true;
-            LblCategoryId.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            LblCategoryId.Location = new Point(380, 128);
-            LblCategoryId.Name = "LblCategoryId";
-            LblCategoryId.Size = new Size(71, 15);
-            LblCategoryId.TabIndex = 19;
-            LblCategoryId.Text = "Category Id";
-            // 
-            // CbCategoryid
-            // 
-            CbCategoryid.FormattingEnabled = true;
-            CbCategoryid.Location = new Point(380, 146);
-            CbCategoryid.Name = "CbCategoryid";
-            CbCategoryid.Size = new Size(121, 23);
-            CbCategoryid.TabIndex = 20;
+            TxtCategoryId.Location = new Point(380, 146);
+            TxtCategoryId.Name = "TxtCategoryId";
+            TxtCategoryId.PlaceholderText = "Category Id";
+            TxtCategoryId.Size = new Size(354, 23);
+            TxtCategoryId.TabIndex = 21;
             // 
             // ProductView
             // 
@@ -351,9 +351,9 @@
             tabControl1.ResumeLayout(false);
             tabPageProductList.ResumeLayout(false);
             tabPageProductList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DgProduct).EndInit();
             tabPageProductDetail.ResumeLayout(false);
             tabPageProductDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)DgProduct).EndInit();
             ResumeLayout(false);
         }
 
@@ -373,7 +373,6 @@
         private Button BtnSearch;
         private TextBox TxtSearch;
         private Label LblSearch;
-        private ComboBox CbCategoryid;
         private Label LblCategoryId;
         private TextBox TxtProductStock;
         private TextBox TxtProductPrice;
@@ -385,5 +384,6 @@
         private Label LblProductName;
         private TextBox TxtProductId;
         private Label LblProductId;
+        private TextBox TxtCategoryId;
     }
 }

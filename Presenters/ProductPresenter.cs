@@ -53,6 +53,7 @@ namespace Supermarket_mvp.Presenters
             view.ProductName = "";
             view.ProductPrice = "";
             view.ProductStock = "";
+            view.CategoryId = "";
         }
 
         private void SaveProduct(object? sender, EventArgs e)
@@ -62,6 +63,7 @@ namespace Supermarket_mvp.Presenters
             Product.Name = view.ProductName;
             Product.Price = Convert.ToInt32(view.ProductPrice);
             Product.Stock = Convert.ToInt32(view.ProductStock);
+            Product.CategoryId = Convert.ToInt32(view.CategoryId);
 
             try
             {
@@ -96,7 +98,7 @@ namespace Supermarket_mvp.Presenters
 
                 repository.Delete(product.Id);
                 view.IsSuccessful = true;
-                view.Message = "Pay Mode deleted successfully";
+                view.Message = "Product deleted successfully";
                 loadAllProductList();
             }
             catch (Exception ex)
@@ -114,6 +116,7 @@ namespace Supermarket_mvp.Presenters
             view.ProductName = product.Name;
             view.ProductPrice = product.Price.ToString();
             view.ProductStock = product.Stock.ToString();
+            view.CategoryId = product.CategoryId.ToString();
 
             view.IsEdit = true;
         }
