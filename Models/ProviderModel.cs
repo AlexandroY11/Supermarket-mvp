@@ -20,12 +20,12 @@ namespace Supermarket_mvp.Models
 
         [DisplayName("Provider Address")]
         [Required(ErrorMessage = "Provider Address is required")]
-        [StringLength(200, MinimumLength = 3, ErrorMessage = "Provider Address must be between 3 and 200 characters")]
+        [StringLength(200, MinimumLength = 8, ErrorMessage = "Provider Address must be between 8 and 200 characters")]
         public string Address { get; set; }
 
         [DisplayName("Provider Phone")]
         [Required(ErrorMessage = "Provider Phone is required")]
-        [StringLength(10, MinimumLength = 3, ErrorMessage = "Provider Phone must be 10 characters")]
+        [StringLength(10, MinimumLength = 10, ErrorMessage = "Provider Phone must be 10 characters")]
         public string Phone { get; set; }
     }
 }

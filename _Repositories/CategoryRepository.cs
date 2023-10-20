@@ -90,17 +90,19 @@ namespace Supermarket_mvp._Repositories
         {
             var categoryList = new List<CategoryModel>();
             int categoryId = int.TryParse(value, out _) ? Convert.ToInt32(value) : 0;
-            string categoryName = value;
+            string categoryValue = value;
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
             {
                 connection.Open();
                 command.Connection = connection;
                 command.CommandText = @"SELECT * FROM Categories
-                                        WHERE Pay_Mode_Id = @id or Pay_Mode_Name LIKE @name+ '%'
-                                        ORDER By Pay_Mode_Id DESC";
+                                        WHERE Category_Id = @id 
+                                        OR Category_Name LIKE @value+ '%'
+                                        OR Category_Description LIKE @value+ '%'
+                                        ORDER By Category_Id DESC";
                 command.Parameters.Add("@id", SqlDbType.Int).Value = categoryId;
-                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = categoryName;
+                command.Parameters.Add("@value", SqlDbType.NVarChar).Value = categoryValue;
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())

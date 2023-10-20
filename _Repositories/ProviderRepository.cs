@@ -53,7 +53,7 @@ namespace Supermarket_mvp._Repositories
                 command.Connection = connection;
                 command.CommandText = @"UPDATE Providers
                                         SET Provider_Name =@name,
-                                        Provider_Address = @address
+                                        Provider_Address = @address,
                                         Provider_Phone = @phone
                                         WHERE Provider_Id = @id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = providerModel.Name;
@@ -93,17 +93,20 @@ namespace Supermarket_mvp._Repositories
         {
             var providerList = new List<ProviderModel>();
             int providerId = int.TryParse(value, out _) ? Convert.ToInt32(value) : 0;
-            string providerName = value;
+            string providerValue = value;
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = @"SELECT * FROM Provider
-                                        WHERE Provider_Id = @id or Provider_Name LIKE @name+ '%'
+                command.CommandText = @"SELECT * FROM Providers
+                                        WHERE Provider_Id = @id 
+                                        OR Provider_Name LIKE @value+ '%'
+                                        OR Provider_Address LIKE @value+ '%'
+                                        OR Provider_Phone LIKE @value+ '%'
                                         ORDER By Provider_Id DESC";
                 command.Parameters.Add("@id", SqlDbType.Int).Value = providerId;
-                command.Parameters.Add("@name", SqlDbType.NVarChar).Value = providerName;
+                command.Parameters.Add("@value", SqlDbType.NVarChar).Value = providerValue;
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
