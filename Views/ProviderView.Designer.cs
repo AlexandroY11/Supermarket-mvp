@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            PanelPayMode = new Panel();
+            PanelProvider = new Panel();
             pictureBox1 = new PictureBox();
             LblProvider = new Label();
             tabControl1 = new TabControl();
             tabPageProviderList = new TabPage();
-            tabPageProviderDetail = new TabPage();
-            BtnClose = new Button();
-            BtnDelete = new Button();
-            BtnEdit = new Button();
-            BtnNew = new Button();
             DgProvider = new DataGridView();
             BtnSearch = new Button();
             TxtSearch = new TextBox();
             LblSearch = new Label();
+            BtnClose = new Button();
+            BtnDelete = new Button();
+            BtnEdit = new Button();
+            BtnNew = new Button();
+            tabPageProviderDetail = new TabPage();
+            TxtProviderPhone = new TextBox();
+            label2 = new Label();
             BtnCancel = new Button();
             BtnSave = new Button();
             TxtProviderAddress = new TextBox();
@@ -50,25 +52,23 @@
             LblProviderName = new Label();
             TxtProviderId = new TextBox();
             LblProviderId = new Label();
-            TxtProviderPhone = new TextBox();
-            label2 = new Label();
-            PanelPayMode.SuspendLayout();
+            PanelProvider.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPageProviderList.SuspendLayout();
-            tabPageProviderDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgProvider).BeginInit();
+            tabPageProviderDetail.SuspendLayout();
             SuspendLayout();
             // 
-            // PanelPayMode
+            // PanelProvider
             // 
-            PanelPayMode.Controls.Add(pictureBox1);
-            PanelPayMode.Controls.Add(LblProvider);
-            PanelPayMode.Dock = DockStyle.Top;
-            PanelPayMode.Location = new Point(0, 0);
-            PanelPayMode.Name = "PanelPayMode";
-            PanelPayMode.Size = new Size(800, 100);
-            PanelPayMode.TabIndex = 1;
+            PanelProvider.Controls.Add(pictureBox1);
+            PanelProvider.Controls.Add(LblProvider);
+            PanelProvider.Dock = DockStyle.Top;
+            PanelProvider.Location = new Point(0, 0);
+            PanelProvider.Name = "PanelProvider";
+            PanelProvider.Size = new Size(800, 100);
+            PanelProvider.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -119,66 +119,6 @@
             tabPageProviderList.Text = "Provider List";
             tabPageProviderList.UseVisualStyleBackColor = true;
             // 
-            // tabPageProviderDetail
-            // 
-            tabPageProviderDetail.Controls.Add(TxtProviderPhone);
-            tabPageProviderDetail.Controls.Add(label2);
-            tabPageProviderDetail.Controls.Add(BtnCancel);
-            tabPageProviderDetail.Controls.Add(BtnSave);
-            tabPageProviderDetail.Controls.Add(TxtProviderAddress);
-            tabPageProviderDetail.Controls.Add(label1);
-            tabPageProviderDetail.Controls.Add(TxtProviderName);
-            tabPageProviderDetail.Controls.Add(LblProviderName);
-            tabPageProviderDetail.Controls.Add(TxtProviderId);
-            tabPageProviderDetail.Controls.Add(LblProviderId);
-            tabPageProviderDetail.Location = new Point(4, 24);
-            tabPageProviderDetail.Name = "tabPageProviderDetail";
-            tabPageProviderDetail.Padding = new Padding(3);
-            tabPageProviderDetail.Size = new Size(792, 322);
-            tabPageProviderDetail.TabIndex = 1;
-            tabPageProviderDetail.Text = "Provider Detail";
-            tabPageProviderDetail.UseVisualStyleBackColor = true;
-            // 
-            // BtnClose
-            // 
-            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(585, 250);
-            BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(199, 62);
-            BtnClose.TabIndex = 11;
-            BtnClose.UseVisualStyleBackColor = true;
-            // 
-            // BtnDelete
-            // 
-            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(585, 182);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(199, 62);
-            BtnDelete.TabIndex = 10;
-            BtnDelete.UseVisualStyleBackColor = true;
-            // 
-            // BtnEdit
-            // 
-            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(585, 114);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(199, 62);
-            BtnEdit.TabIndex = 9;
-            BtnEdit.UseVisualStyleBackColor = true;
-            // 
-            // BtnNew
-            // 
-            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(585, 46);
-            BtnNew.Name = "BtnNew";
-            BtnNew.Size = new Size(199, 62);
-            BtnNew.TabIndex = 8;
-            BtnNew.UseVisualStyleBackColor = true;
-            // 
             // DgProvider
             // 
             DgProvider.AllowUserToAddRows = false;
@@ -221,6 +161,85 @@
             LblSearch.Size = new Size(96, 15);
             LblSearch.TabIndex = 12;
             LblSearch.Text = "Search Provider";
+            // 
+            // BtnClose
+            // 
+            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnClose.Image = Properties.Resources.cerrar;
+            BtnClose.Location = new Point(585, 250);
+            BtnClose.Name = "BtnClose";
+            BtnClose.Size = new Size(199, 62);
+            BtnClose.TabIndex = 11;
+            BtnClose.UseVisualStyleBackColor = true;
+            // 
+            // BtnDelete
+            // 
+            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnDelete.Image = Properties.Resources.delete;
+            BtnDelete.Location = new Point(585, 182);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(199, 62);
+            BtnDelete.TabIndex = 10;
+            BtnDelete.UseVisualStyleBackColor = true;
+            // 
+            // BtnEdit
+            // 
+            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnEdit.Image = Properties.Resources.edit;
+            BtnEdit.Location = new Point(585, 114);
+            BtnEdit.Name = "BtnEdit";
+            BtnEdit.Size = new Size(199, 62);
+            BtnEdit.TabIndex = 9;
+            BtnEdit.UseVisualStyleBackColor = true;
+            // 
+            // BtnNew
+            // 
+            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnNew.Image = Properties.Resources._new;
+            BtnNew.Location = new Point(585, 46);
+            BtnNew.Name = "BtnNew";
+            BtnNew.Size = new Size(199, 62);
+            BtnNew.TabIndex = 8;
+            BtnNew.UseVisualStyleBackColor = true;
+            // 
+            // tabPageProviderDetail
+            // 
+            tabPageProviderDetail.Controls.Add(TxtProviderPhone);
+            tabPageProviderDetail.Controls.Add(label2);
+            tabPageProviderDetail.Controls.Add(BtnCancel);
+            tabPageProviderDetail.Controls.Add(BtnSave);
+            tabPageProviderDetail.Controls.Add(TxtProviderAddress);
+            tabPageProviderDetail.Controls.Add(label1);
+            tabPageProviderDetail.Controls.Add(TxtProviderName);
+            tabPageProviderDetail.Controls.Add(LblProviderName);
+            tabPageProviderDetail.Controls.Add(TxtProviderId);
+            tabPageProviderDetail.Controls.Add(LblProviderId);
+            tabPageProviderDetail.Location = new Point(4, 24);
+            tabPageProviderDetail.Name = "tabPageProviderDetail";
+            tabPageProviderDetail.Padding = new Padding(3);
+            tabPageProviderDetail.Size = new Size(792, 322);
+            tabPageProviderDetail.TabIndex = 1;
+            tabPageProviderDetail.Text = "Provider Detail";
+            tabPageProviderDetail.UseVisualStyleBackColor = true;
+            // 
+            // TxtProviderPhone
+            // 
+            TxtProviderPhone.Location = new Point(8, 196);
+            TxtProviderPhone.Multiline = true;
+            TxtProviderPhone.Name = "TxtProviderPhone";
+            TxtProviderPhone.PlaceholderText = "Provider Phone";
+            TxtProviderPhone.Size = new Size(354, 23);
+            TxtProviderPhone.TabIndex = 17;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(8, 178);
+            label2.Name = "label2";
+            label2.Size = new Size(93, 15);
+            label2.TabIndex = 16;
+            label2.Text = "Provider Phone";
             // 
             // BtnCancel
             // 
@@ -297,49 +316,30 @@
             LblProviderId.TabIndex = 8;
             LblProviderId.Text = "Provider Id";
             // 
-            // TxtProviderPhone
-            // 
-            TxtProviderPhone.Location = new Point(8, 196);
-            TxtProviderPhone.Multiline = true;
-            TxtProviderPhone.Name = "TxtProviderPhone";
-            TxtProviderPhone.PlaceholderText = "Provider Phone";
-            TxtProviderPhone.Size = new Size(354, 23);
-            TxtProviderPhone.TabIndex = 17;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(8, 178);
-            label2.Name = "label2";
-            label2.Size = new Size(93, 15);
-            label2.TabIndex = 16;
-            label2.Text = "Provider Phone";
-            // 
             // ProviderView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(tabControl1);
-            Controls.Add(PanelPayMode);
+            Controls.Add(PanelProvider);
             Name = "ProviderView";
             Text = "ProviderView";
-            PanelPayMode.ResumeLayout(false);
-            PanelPayMode.PerformLayout();
+            PanelProvider.ResumeLayout(false);
+            PanelProvider.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabControl1.ResumeLayout(false);
             tabPageProviderList.ResumeLayout(false);
             tabPageProviderList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DgProvider).EndInit();
             tabPageProviderDetail.ResumeLayout(false);
             tabPageProviderDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)DgProvider).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel PanelPayMode;
+        private Panel PanelProvider;
         private PictureBox pictureBox1;
         private Label LblProvider;
         private TabControl tabControl1;
