@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Supermarket_mvp._Repositories
 {
-    internal class ProviderRepository
+    internal class ProviderRepository : BaseRepository, IProviderRepository
     {
         public ProviderRepository(string connectionString)
         {
